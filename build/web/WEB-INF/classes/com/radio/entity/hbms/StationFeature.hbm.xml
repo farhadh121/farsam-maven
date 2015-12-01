@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-lazy="false">
+    <class name="com.radio.entity.hibernate.StationFeatureEntity"
+           table="StationFeature" optimistic-lock="version">
+
+        <id name="stationFeatureID">
+            <column name="StationFeatureID" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <timestamp name="version" source="db"/>
+
+        <property name="featureKey">
+            <column name="FeatureKey" sql-type="varchar(100)"/>
+        </property>
+
+        <property name="featureValue">
+            <column name="FeatureValue" sql-type="varchar(100)"/>
+        </property>
+
+        <many-to-one name="owner" class="com.radio.entity.hibernate.StationEntity" fetch="select">
+            <column name="StationID" not-null="true"/>
+        </many-to-one>
+
+    </class>
+</hibernate-mapping>

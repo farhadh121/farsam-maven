@@ -1,0 +1,137 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times</button>
+      <h4 class="modal-title" style="text-decoration-color: #000000">Search</h4>
+    </div>
+    <div class="modal-body" style="height: 80px; background-color: #7d94a4;">
+        <form class="navbar-form navbar-left input-s-lg m-t m-l-n-xs hidden-xs" role="search" method="post" enctype="multipart/form-data" action="#">
+            <div class="form-group">
+                <div class="input-group">
+                    <input id="searchbar" type="text" class="form-control b-dark rounded" placeholder="Search songs, albums..." oninput="getSearchCandidates();" style="margin-left: 10%; margin-top: -2%;" autofocus>
+                    <div id='results' class="ac_results"></div>
+                </div>
+
+                <style>
+                        /* highlight results */
+                        /* CSS Document */
+
+
+                    .ui-menu-item > a.ui-corner-all {
+                        display: block;
+                        padding: 3px 15px;
+                        clear: both;
+                        font-weight: normal;
+                        line-height: 18px;
+                        color: #555555;
+                        white-space: nowrap;
+                        text-decoration: none;
+                    }
+
+
+
+                        /* loading - the AJAX indicator */
+                    .ui-autocomplete-loading {
+                        background: white url('../img/ajax-loader.gif') right center no-repeat;
+                    }
+
+                        /* scroll results */
+                    .ui-autocomplete {
+                        max-height: 500px;
+                        overflow-y: auto;
+                        /* prevent horizontal scrollbar */
+                        overflow-x: hidden;
+                        /* add padding for vertical scrollbar */
+                        padding-right: 5px;
+                    }
+
+
+
+
+                    .ui-autocomplete li {
+                        font-size: 16px;
+                        display: block;
+                    }
+
+                    #image-prop {
+
+                        height: 50px;
+                        width: 50px;
+                    }
+                    .ui-state-focus
+                    {
+                        color:White;
+                        background:#96B202;
+                        outline:none;
+                        display:block
+                    }
+                    #results{
+                        width:400px;
+                        margin:0 auto;
+                        text-align:center;
+                    }
+
+                        /* The Form*/
+
+
+                    #searchbar{
+                        font:17px Tahoma, Arial, Helvetica, sans-serif;
+                        padding:4px 7px;
+                        border:1px solid #ffffff;
+                        background-color: #ffffff;
+                        width:350px;
+                        vertical-align:middle;
+                        color:#3c3c3c;
+                    }
+
+                    input:focus {
+                        outline: none;
+                    }
+
+                        /* CSS Document */
+                    .ac_results{overflow:hidden;z-index:99999;margin:0;padding:0;}
+                    .ac_results ul{list-style-position:outside;list-style:none;background:#f5f5f5;margin:0;padding:5px 10px 10px}
+                    .ac_results li{cursor:pointer;display:block;overflow:auto;margin:0;padding:0;border-top:1px solid #e1e1e1;}
+                    .ac_results li:first-child{border:0;}
+                    .ac_loading{background-image:url(./images/loading.gif);background-position:97% center;background-repeat:no-repeat;}
+                    .ac_over{background-color:#FFFFF0;color:#fb0}
+                    .ac_over a:hover{color:#000}
+                    .ac_results li a{display:block; overflow:auto; padding:10px; color:#2c2c2c;}
+                    .ac_results li a img{width:80px; height:auto; max-height:80px;float:left; margin-right:15px;}
+
+
+
+                        /* Styling for Autocomplete */
+
+
+
+                        /* IE 6 doesn't support max-height
+                        * we use height instead, but this forces the menu to always be this tall
+                        */
+                    * html .ui-autocomplete {
+                        height: 250px;
+                    }
+                </style>
+            </div>
+      </form>
+    </div>
+
+    <script src="./js/autocomplete/jquery-ui.js">jQuery.noConflict()</script>
+    <script src="./js/jquery-ui-1.10.3.custom.min.js">jQuery.noConflict()</script><script src="./js/custom/search-ajax.js"></script>
+    <script src="./js/jquery.expander.js"></script>
+    <!-- added for autocomplete-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js">jQuery.noConflict()</script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js">jQuery.noConflict()</script>
+    <script src="js/jquery.min.js">jQuery.noConflict()</script>
+      <!-- Bootstrap -->
+      <script src="js/bootstrap.js"></script>
+      <!-- App -->
+
+      <!--<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+
+      <script src="js/app.plugin.js"></script>  -->
+
+
+
+  </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

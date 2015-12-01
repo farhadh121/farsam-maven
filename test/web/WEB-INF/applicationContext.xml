@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/lang  http://www.springframework.org/schema/lang/spring-lang-3.0.xsd
+                           http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util-3.0.xsd
+                           http://www.springframework.org/schema/tool  http://www.springframework.org/schema/tool/spring-tool-3.0.xsd
+                           http://www.springframework.org/schema/aop   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                           http://www.springframework.org/schema/jee   http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+                           http://www.springframework.org/schema/tx    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+
+    <import resource="Spring-Hibernate.xml"/>
+
+    <!-- Song Beans -->
+    <bean class="com.radio.svc.dalc.hibernate.SongDA" id="songDA">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean class="com.radio.svc.logic.SongLogic" id="songLogic">
+        <property name="songDA" ref="songDA"/>
+        <property name="albumDA" ref="albumDA"/>
+        <property name="artistDA" ref="artistDA"/>
+        <property name="commonFile" ref="commonFile"/>
+    </bean>
+
+    <bean class="com.radio.svc.facade.SongFacede" id="songFacede">
+        <property name="songLogic" ref="songLogic"/>
+    </bean>
+    <!-- End Song Beans -->
+
+    <!-- Artist Beans -->
+    <bean class="com.radio.svc.dalc.hibernate.ArtistDA" id="artistDA">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean class="com.radio.svc.logic.ArtistLogic" id="artistLogic">
+        <property name="artistDA" ref="artistDA"/>
+    </bean>
+
+    <bean class="com.radio.svc.facade.ArtistFacede" id="artistFacede">
+        <property name="artistLogic" ref="artistLogic"/>
+    </bean>
+    <!-- End Artist Beans -->
+
+    <!-- Album Beans -->
+    <bean class="com.radio.svc.dalc.hibernate.AlbumDA" id="albumDA">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- End Album Beans -->
+
+
+
+
+
+    <bean class="com.radio.svc.common.CommonFile" id="commonFile">
+        <property name="dash" value="-"/>
+        <property name="dot" value="."/>
+        <property name="separator" value="/"/>
+        <property name="songArtworksRepositoryBasePath" value="${taghcheh_radio.songartworkspath}"/>
+        <property name="songsRepositoryBasePath" value="${taghcheh_radio.songspath}"/>
+        <property name="artistArtworkRepositoryBasePath" value="${taghcheh_radio.artistartworkspath}"/>
+    </bean>
+
+
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="get*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="*" rollback-for="java.lang.Throwable"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="ISongServiceProviderTrans"
+                      expression="execution(* com.radio.svc.serviceinterface.ISongServiceProvider.*(..) )"/>
+        <aop:pointcut id="IArtistServiceProviderTrans"
+                      expression="execution(* com.radio.svc.serviceinterface.IArtistServiceProvider.*(..) )"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="ISongServiceProviderTrans"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="IArtistServiceProviderTrans"/>
+    </aop:config>
+
+</beans>
