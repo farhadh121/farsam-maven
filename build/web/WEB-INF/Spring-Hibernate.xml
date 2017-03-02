@@ -8,7 +8,7 @@
         <property name="placeholderPrefix" value="${taghcheh_"/>
         <property name="locations">
             <list>
-                <value>/WEB-INF/sponsor.properties</value>
+                <value>/WEB-INF/taghcheh.properties</value>
                 <value>/WEB-INF/ui.properties</value>
             </list>
         </property>
@@ -16,10 +16,10 @@
 
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass"                            value="${sponsor_hibernate.driverClassName}"/>
-        <property name="jdbcUrl"                                value="${sponsor_hibernate.url}"/>
-        <property name="user"                                   value="${sponsor_hibernate.username}"/>
-        <property name="password"                               value="${sponsor_hibernate.password}"/>
+        <property name="driverClass"                            value="${taghcheh_hibernate.driverClassName}"/>
+        <property name="jdbcUrl"                                value="${taghcheh_hibernate.url}"/>
+        <property name="user"                                   value="${taghcheh_hibernate.username}"/>
+        <property name="password"                               value="${taghcheh_hibernate.password}"/>
 
         <property name="acquireIncrement"                       value="20"/>
         <property name="acquireRetryAttempts"                   value="30"/>
@@ -42,7 +42,7 @@
 
    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
         <property name="dataSource"     ref="dataSource"/>
-        <property name="schemaUpdate"   value="${sponsor_schema.update}"/>
+        <property name="schemaUpdate"   value="${taghcheh_schema.update}"/>
         <property name="mappingResources">
             <list>
             	<value>/com/radio/entity/hbms/RecordLabel.hbm.xml</value>

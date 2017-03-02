@@ -109,207 +109,204 @@ public class InitArtist extends AbstractController {
 
 
 //Adding Artist
+//
+//        Map<String, String> nooshafarinFeatures = new HashMap<String, String>();
+//        nooshafarinFeatures.put("Genre", "Persian 6/8 Dance");
+//        artistServiceProvider.addNewArtist("Nooshafarin", "Fatima Abdi, better known by her stage name Nooshafarin, is an Iranian singer. " +
+//                                                          "She initially moved to India in 1986. She then moved to L.A. in 1992. She was " +
+//                                                          "born on March 2, 1956 , Gilan Province, Iran",
+//                                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "nooshafrin.jpg", nooshafarinFeatures);
+//
+//        Map<String, String> shahramFeatures  = new HashMap<String, String>();
+//        shahramFeatures.put("Genre", "Persian 6/8 Dance");
+//        artistServiceProvider.addNewArtist("Shahram Shapareh","He started his career as a drum player in the early 1960s when he was only 13." +
+//                                           " In the mid 1960s at the age of 17, he formed a band of his own named Rebells. After the Islamic revolution" +
+//                                           " in 1979, Shahram, who had migrated to California a few years earlier, did not have the opportunity to return " +
+//                                           "to his homeland. Since then, he has been living in the United States. After a career spanning 50 years, he is a " +
+//                                           "one of the most popular artists in the Iranian society and his concerts are well received by Iranians all over the world.",
+//                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "shahram-shapareh.jpg", shahramFeatures);
+//
+//        Map<String,String> ebiFeatures = new HashMap<String, String>();
+//        ebiFeatures.put("Genre", "Persian Pop");
+//        artistServiceProvider.addNewArtist("Ebi","Ebrahim Hamedi, known better by his stage name Ebi, is one of the most famous and influential Iranian " +
+//                                           "singers of his time. He is widely known for his expressive voice and is considered one of the best singers of his generation" +
+//                                            "He was born June 19, 1949", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "ebi.jpg",ebiFeatures);
+//
+//        Map<String, String> babakFeatures  = new HashMap<String, String>();
+//        babakFeatures.put("Genre", "Persian Pop Dance");
+//        artistServiceProvider.addNewArtist("Babak Rahnama", "Babak Rahnama is a Persian Trance singer and DJ", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "babak-rahnama.jpg", babakFeatures);
+//
+//        Map<String, String> barobaxFeatures =  new HashMap<String, String>();
+//        babakFeatures.put("Genre", "Persian Pop Dance");
+//        artistServiceProvider.addNewArtist("Baro Bax","Barobax are an underground Iranian pop band with all the three members living in Tehran, Iran. " +
+//                                            "Like many other forms of music in Iran, their music is censored domestically.", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "barobax.jpg", barobaxFeatures);
+//
+//        Map<String, String > arashFeatures = new HashMap<String, String>();
+//        arashFeatures.put("Genre", "Persian Pop Dance");
+//        artistServiceProvider.addNewArtist("Arash","Arash Labaf was born in Tehran, Iran. At age ten, he and his family moved to Sweden, where he still resides." +
+//                                           " In an interview with BBC Persian Television, he has mentioned that his mother and father are from the Iranian cities of Shiraz and Isfahan, respectively." +
+//                                           " Also in one of his interviews, he stated his great grandfather is Iranian Azerbaijani. In an interview with " +
+//                                           "Arash emphasized: My great-grandfather was an Azeri so I always feel my Azerbaijani roots.", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "arash.jpg", arashFeatures);
+//
+//
+//        Map<String,String> hosseinTohiFeatures = new HashMap<String, String>();
+//        hosseinTohiFeatures.put("Genre", "Persian Hip-Hop");
+//        artistServiceProvider.addNewArtist("Hossein Tohi","Hossein Mousavi or better known with his stage name Hossein Tohi was one of the first artists who introduced Rap/Hip-Hop music.",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "hossein-tohi.jpg" , hosseinTohiFeatures);
+//
+//        Map<String, String> siavashShamsFeatures = new HashMap<String, String>();
+//        siavashShamsFeatures.put("Genre", "Pesian Pop");
+//        artistServiceProvider.addNewArtist("Siavash Shams","When Siavash Shams introduced himself to the public with his first album, Hamsayeh Haa (Neighbors) in 1985, many believed that a " +
+//                                           "new wave of Iranian popular music had been born. His first public appearance was recorded by members of the Iranian community in the U.S. who had " +
+//                                           "fled their homeland after the Islamic Revolution. He was born January 26, 1962 in Ahvaz, Iran", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "siavash-shams.jpg",siavashShamsFeatures);
+//
+//
+//        Map<String, String> sinaHejaziFeatures = new HashMap<String, String>();
+//        sinaHejaziFeatures.put("Genre", "Persian Slow Pop");
+//        artistServiceProvider.addNewArtist("Sina Hejazi", "Sine Hejazi was born on 1982. He released his first song on 2007. His extraordinary songs made him very famous among Iranian youth. ",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "sina-hejazi.jpg", sinaHejaziFeatures);
+//
+//        Map<String, String> xaniarFeatures = new HashMap<String, String>();
+//        xaniarFeatures.put("Genre", "Persian Electronic");
+//        xaniarFeatures.put("Genre","Persian Pop Dance");
+//        artistServiceProvider.addNewArtist("Xaniar", "Xaniar Khosravi (Born in 1986 in Tehran, Iran) is an Iranian Pop/Hip Hop singer, composer, lyricist and actor. He began pursuing music at " +
+//                                                    "about the age of 7 at the same time as his older brother Sirvan, who is also a popular singer ",
+//                                                    commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "xaniar.jpg", xaniarFeatures);
+//
+//        Map<String, String> saraNaeiniFeatures = new HashMap<String, String>();
+//        saraNaeiniFeatures.put("Genre", "Persian Jazz");
+//        artistServiceProvider.addNewArtist("Sara Naeini", "Sara Naeini born on 22nd of Jun 1981.number one champion of Iran in gymnastic since she was 8 years old." +
+//                                            "She interred the world of music when she was 18 by performing solo in a private concert held in a house, lasting 3 nights, each night 2 performances." +
+//                                            "After that she participated in many albums and concerts as a back vocalist, and worked with some bands as a member. ",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "sara-naeini.jpg", saraNaeiniFeatures);
 
-        Map<String, String> nooshafarinFeatures = new HashMap<String, String>();
-        nooshafarinFeatures.put("Genre", "Persian 6/8 Dance");
-        artistServiceProvider.addNewArtist("Nooshafarin", "Fatima Abdi, better known by her stage name Nooshafarin, is an Iranian singer. " +
-                                                          "She initially moved to India in 1986. She then moved to L.A. in 1992. She was " +
-                                                          "born on March 2, 1956 , Gilan Province, Iran",
-                                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "nooshafrin.jpg", nooshafarinFeatures);
+//////        Map<String, String> benyaminFeatures = new HashMap<String, String>();
+//////        benyaminFeatures.put("Genre", "Persian Pop");
+//////        artistServiceProvider.addNewArtist("Benyamin", "Benyamin Bahadori is an Iranian singer of Persian pop music from Tehran, Iran. His 2006 album 85 was a commercial" +
+//////                                           "success within Iran and with the Iranian diaspora abroad. His most famous songs include Khatereha" +
+//////                                           "In September 2006, Bahadori traveled to Sweden to have concerts in Tantolunden, Hornstull and Stockholm." +
+//////                                           "Bahadori is also famous for his religious-themed compositions. Bahadori married Nasim Heshmati in February 2003." +
+//////                                           " His wife died in a car accident in Tehran on 21 December 2013. The couple had a daughter and her name is Baran. ",
+//////                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "benyamin-bahadori.jpg", benyaminFeatures);
+//////
+//////        Map<String, String> javadBadiZadehFeatures = new HashMap<String, String>();
+//////        javadBadiZadehFeatures.put("Genre", "Persian Contemporary Pop");
+//////        artistServiceProvider.addNewArtist("Javad BadiZadeh", "Javad Badi'Zadeh was born in 1901 in Tehran. He was one of the first singers who performed at Radio Iran" +
+//////                                           " and with the National Music Society Orchestra, conducted by Rouhollah Khaleghi. In the 1940s he recorded many of his songs, " +
+//////                                           "including Jelve-ye Gol, shekve-ye Del, Bolbol-e Mahbus, and Jana Hezaran Afarin (accompanied by Morteza Mahjoubi). He had a good" +
+//////                                           " command of the Persian traditional music and was one of the first singers who wrote the music for his songs. His most famous melody," +
+//////                                           " Khazane Eshgh, has lyrics by Rahi Moayyeri. ",
+//////                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "javad-badi-zadeh.jpg", javadBadiZadehFeatures);
+//////
+//////        Map<String, String> amirAliA2Features = new HashMap<String, String>();
+//////        amirAliA2Features.put("Genre", "Persian Rap");
+//////        artistServiceProvider.addNewArtist("A2", "Born in Tehran, March 1988, Amirali aka A2  started rapping under alias “Double A” in highschool and continued his career through" +
+//////                                           " the highest levels of persian hip hop since releasing his debut “khaterehaye ghabli” in 2007. His style of rhyming and performing affected many " +
+//////                                           "rappers since then despite the small number of tracks he has released to the day.",
+//////                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "amirali.jpg", amirAliA2Features);
+//////
+////        Map<String, String> andyFeatures = new HashMap<String, String>();
+////        andyFeatures.put("Genre", "Persian 6/8 Dance");
+////        artistServiceProvider.addNewArtist("Andy", "Andranik Madadian, better known by his stage name, Andy , was born 1958 is a famous Armenian-Iranian singer-songwriter. Andy made it big when " +
+////                                           "he joined Kouros Shahmiri and together formed a successful duo Andy & Kouros.Andy & Kouros released 4 albums together: Khastegary (1985), Parvaz (1988)," +
+////                                           " the hugely successful album 'Balla', and finally Goodbye (1991). The two split in 1992. Andy married his longtime girlfriend and artist Shani Rigsbee on" +
+////                                           " November 11, 2011.",
+////                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "andy-madadian.jpg", andyFeatures);
+////
+////        Map<String, String> arianFeatures = new HashMap<String, String>();
+////        arianFeatures.put("Genre", "Persian Pop");
+////        artistServiceProvider.addNewArtist("Arian Band", "On 22 Nov. 1999, the band appeared and performed on the stage. ARIAN performed it’s first overseas concert in Manama (Bahrain) and with its thereof" +
+////                                           " success, performed a very successful Concert in Dubai (U.A.E). They recorded their first album on Sep 10th, 2000.",
+////                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "arian-band.jpg", arianFeatures);
+//
+//        Map<String, String> blackCatsFeatures = new HashMap<String, String>();
+//        blackCatsFeatures.put("Genre", "Persian Pop Dance");
+//        artistServiceProvider.addNewArtist("Black Cats", "Black Cats is the name of an Iranian pop music band founded by Shahbal Shabpareh. The band play a traditional upbeat style of Persian pop music, but " +
+//                                           "are also known to bring in Jazz, R&B, Hip-Hop, Rave and Rapcore influences into their music as well. The most famous and successful members were Pyruz and David (1992- 1999).",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "black-cats.jpg", blackCatsFeatures);
+//
+//        Map<String, String> googooshFeatures = new HashMap<String, String>();
+//        googooshFeatures.put("Genre", "Persian Pop");
+//        artistServiceProvider.addNewArtist("Googoosh", "Faegheh Atashin, born on 5 May 1950 in Tehran, also known by her stage name Googoosh, is an Iranian singer and actress. She is known for her contributions to Iranian" +
+//                                           " pop music, but also starred in a variety of movies from the 1950s to the 1970s. She achieved the pinnacle of her fame and success towards the end of the 1970s. Her overall impact" +
+//                                           " and contributions to Middle Eastern and Central Asian pop-music earned her the title of the most iconic female pop-singer from those regions. She has recorded songs in Italian " +
+//                                           "and in Spanish language. Due to her great talents and overall endearment to her people, she is a symbol of national pride to the people from Iran.",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "googoosh.jpg", googooshFeatures);
+//
+//        Map<String, String>paletFeatures = new HashMap<String, String>();
+//        paletFeatures.put("Genre", "Persian Fusion");
+//        artistServiceProvider.addNewArtist("Pallet", "Formed in November 2010, Pallet is an Iranian Fusion/Jazz band, consisting of Daryoush Azar, Rouzbeh Esfandarmaz, Kaveh Salehi, Mahyar Tahmasebi, Hesam Mohammadinanpour &" +
+//                                           " Omid Nemati; with collaborators such as Khatereh Hakimi, Mehdi Saki & Faraz Aghili.",
+//                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "pallet.jpg", paletFeatures);
 
-        Map<String, String> shahramFeatures  = new HashMap<String, String>();
-        shahramFeatures.put("Genre", "Persian 6/8 Dance");
-        artistServiceProvider.addNewArtist("Shahram Shapareh","He started his career as a drum player in the early 1960s when he was only 13." +
-                                           " In the mid 1960s at the age of 17, he formed a band of his own named Rebells. After the Islamic revolution" +
-                                           " in 1979, Shahram, who had migrated to California a few years earlier, did not have the opportunity to return " +
-                                           "to his homeland. Since then, he has been living in the United States. After a career spanning 50 years, he is a " +
-                                           "one of the most popular artists in the Iranian society and his concerts are well received by Iranians all over the world.",
-                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "shahram-shapareh.jpg", shahramFeatures);
-
-        Map<String,String> ebiFeatures = new HashMap<String, String>();
-        ebiFeatures.put("Genre", "Persian Pop");
-        artistServiceProvider.addNewArtist("Ebi","Ebrahim Hamedi, known better by his stage name Ebi, is one of the most famous and influential Iranian " +
-                                           "singers of his time. He is widely known for his expressive voice and is considered one of the best singers of his generation" +
-                                            "He was born June 19, 1949", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "ebi.jpg",ebiFeatures);
-
-        Map<String, String> babakFeatures  = new HashMap<String, String>();
-        babakFeatures.put("Genre", "Persian Pop Dance");
-        artistServiceProvider.addNewArtist("Babak Rahnama", "Babak Rahnama is a Persian Trance singer and DJ", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "babak-rahnama.jpg", babakFeatures);
-
-        Map<String, String> barobaxFeatures =  new HashMap<String, String>();
-        babakFeatures.put("Genre", "Persian Pop Dance");
-        artistServiceProvider.addNewArtist("Baro Bax","Barobax are an underground Iranian pop band with all the three members living in Tehran, Iran. " +
-                                            "Like many other forms of music in Iran, their music is censored domestically.", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "barobax.jpg", barobaxFeatures);
-
-        Map<String, String > arashFeatures = new HashMap<String, String>();
-        arashFeatures.put("Genre", "Persian Pop Dance");
-        artistServiceProvider.addNewArtist("Arash","Arash Labaf was born in Tehran, Iran. At age ten, he and his family moved to Sweden, where he still resides." +
-                                           " In an interview with BBC Persian Television, he has mentioned that his mother and father are from the Iranian cities of Shiraz and Isfahan, respectively." +
-                                           " Also in one of his interviews, he stated his great grandfather is Iranian Azerbaijani. In an interview with " +
-                                           "Arash emphasized: My great-grandfather was an Azeri so I always feel my Azerbaijani roots.", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "arash.jpg", arashFeatures);
-
-
-        Map<String,String> hosseinTohiFeatures = new HashMap<String, String>();
-        hosseinTohiFeatures.put("Genre", "Persian Hip-Hop");
-        artistServiceProvider.addNewArtist("Hossein Tohi","Hossein Mousavi or better known with his stage name Hossein Tohi was one of the first artists who introduced Rap/Hip-Hop music.",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "hossein-tohi.jpg" , hosseinTohiFeatures);
-
-        Map<String, String> siavashShamsFeatures = new HashMap<String, String>();
-        siavashShamsFeatures.put("Genre", "Pesian Pop");
-        artistServiceProvider.addNewArtist("Siavash Shams","When Siavash Shams introduced himself to the public with his first album, Hamsayeh Haa (Neighbors) in 1985, many believed that a " +
-                                           "new wave of Iranian popular music had been born. His first public appearance was recorded by members of the Iranian community in the U.S. who had " +
-                                           "fled their homeland after the Islamic Revolution. He was born January 26, 1962 in Ahvaz, Iran", commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "siavash-shams.jpg",siavashShamsFeatures);
-
-
-        Map<String, String> sinaHejaziFeatures = new HashMap<String, String>();
-        sinaHejaziFeatures.put("Genre", "Persian Slow Pop");
-        artistServiceProvider.addNewArtist("Sina Hejazi", "Sine Hejazi was born on 1982. He released his first song on 2007. His extraordinary songs made him very famous among Iranian youth. ",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "sina-hejazi.jpg", sinaHejaziFeatures);
-
-        Map<String, String> xaniarFeatures = new HashMap<String, String>();
-        xaniarFeatures.put("Genre", "Persian Electronic");
-        xaniarFeatures.put("Genre","Persian Pop Dance");
-        artistServiceProvider.addNewArtist("Xaniar", "Xaniar Khosravi (Born in 1986 in Tehran, Iran) is an Iranian Pop/Hip Hop singer, composer, lyricist and actor. He began pursuing music at " +
-                                                    "about the age of 7 at the same time as his older brother Sirvan, who is also a popular singer ",
-                                                    commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "xaniar.jpg", xaniarFeatures);
-
-        Map<String, String> saraNaeiniFeatures = new HashMap<String, String>();
-        saraNaeiniFeatures.put("Genre", "Persian Jazz");
-        artistServiceProvider.addNewArtist("Sara Naeini", "Sara Naeini born on 22nd of Jun 1981.number one champion of Iran in gymnastic since she was 8 years old." +
-                                            "She interred the world of music when she was 18 by performing solo in a private concert held in a house, lasting 3 nights, each night 2 performances." +
-                                            "After that she participated in many albums and concerts as a back vocalist, and worked with some bands as a member. ",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "sara-naeini.jpg", saraNaeiniFeatures);
-
-        Map<String, String> benyaminFeatures = new HashMap<String, String>();
-        benyaminFeatures.put("Genre", "Persian Pop");
-        artistServiceProvider.addNewArtist("Benyamin", "Benyamin Bahadori is an Iranian singer of Persian pop music from Tehran, Iran. His 2006 album 85 was a commercial" +
-                                           "success within Iran and with the Iranian diaspora abroad. His most famous songs include Khatereha" +
-                                           "In September 2006, Bahadori traveled to Sweden to have concerts in Tantolunden, Hornstull and Stockholm." +
-                                           "Bahadori is also famous for his religious-themed compositions. Bahadori married Nasim Heshmati in February 2003." +
-                                           " His wife died in a car accident in Tehran on 21 December 2013. The couple had a daughter and her name is Baran. ",
-                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "benyamin-bahadori.jpg", benyaminFeatures);
-
-        Map<String, String> javadBadiZadehFeatures = new HashMap<String, String>();
-        javadBadiZadehFeatures.put("Genre", "Persian Contemporary Pop");
-        artistServiceProvider.addNewArtist("Javad BadiZadeh", "Javad Badi'Zadeh was born in 1901 in Tehran. He was one of the first singers who performed at Radio Iran" +
-                                           " and with the National Music Society Orchestra, conducted by Rouhollah Khaleghi. In the 1940s he recorded many of his songs, " +
-                                           "including Jelve-ye Gol, shekve-ye Del, Bolbol-e Mahbus, and Jana Hezaran Afarin (accompanied by Morteza Mahjoubi). He had a good" +
-                                           " command of the Persian traditional music and was one of the first singers who wrote the music for his songs. His most famous melody," +
-                                           " Khazane Eshgh, has lyrics by Rahi Moayyeri. ",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "javad-badi-zadeh.jpg", javadBadiZadehFeatures);
-
-        Map<String, String> amirAliA2Features = new HashMap<String, String>();
-        amirAliA2Features.put("Genre", "Persian Rap");
-        artistServiceProvider.addNewArtist("A2", "Born in Tehran, March 1988, Amirali aka A2  started rapping under alias “Double A” in highschool and continued his career through" +
-                                           " the highest levels of persian hip hop since releasing his debut “khaterehaye ghabli” in 2007. His style of rhyming and performing affected many " +
-                                           "rappers since then despite the small number of tracks he has released to the day.",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "amirali.jpg", amirAliA2Features);
-
-        Map<String, String> andyFeatures = new HashMap<String, String>();
-        andyFeatures.put("Genre", "Persian 6/8 Dance");
-        artistServiceProvider.addNewArtist("Andy", "Andranik Madadian, better known by his stage name, Andy , was born 1958 is a famous Armenian-Iranian singer-songwriter. Andy made it big when " +
-                                           "he joined Kouros Shahmiri and together formed a successful duo Andy & Kouros.Andy & Kouros released 4 albums together: Khastegary (1985), Parvaz (1988)," +
-                                           " the hugely successful album 'Balla', and finally Goodbye (1991). The two split in 1992. Andy married his longtime girlfriend and artist Shani Rigsbee on" +
-                                           " November 11, 2011.",
-                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "andy-madadian.jpg", andyFeatures);
-
-        Map<String, String> arianFeatures = new HashMap<String, String>();
-        arianFeatures.put("Genre", "Persian Pop");
-        artistServiceProvider.addNewArtist("Arian Band", "On 22 Nov. 1999, the band appeared and performed on the stage. ARIAN performed it’s first overseas concert in Manama (Bahrain) and with its thereof" +
-                                           " success, performed a very successful Concert in Dubai (U.A.E). They recorded their first album on Sep 10th, 2000.",
-                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "arian-band.jpg", arianFeatures);
-
-        Map<String, String> blackCatsFeatures = new HashMap<String, String>();
-        blackCatsFeatures.put("Genre", "Persian Pop Dance");
-        artistServiceProvider.addNewArtist("Black Cats", "Black Cats is the name of an Iranian pop music band founded by Shahbal Shabpareh. The band play a traditional upbeat style of Persian pop music, but " +
-                                           "are also known to bring in Jazz, R&B, Hip-Hop, Rave and Rapcore influences into their music as well. The most famous and successful members were Pyruz and David (1992- 1999).",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "black-cats.jpg", blackCatsFeatures);
-
-        Map<String, String> googooshFeatures = new HashMap<String, String>();
-        googooshFeatures.put("Genre", "Persian Pop");
-        artistServiceProvider.addNewArtist("Googoosh", "Faegheh Atashin, born on 5 May 1950 in Tehran, also known by her stage name Googoosh, is an Iranian singer and actress. She is known for her contributions to Iranian" +
-                                           " pop music, but also starred in a variety of movies from the 1950s to the 1970s. She achieved the pinnacle of her fame and success towards the end of the 1970s. Her overall impact" +
-                                           " and contributions to Middle Eastern and Central Asian pop-music earned her the title of the most iconic female pop-singer from those regions. She has recorded songs in Italian " +
-                                           "and in Spanish language. Due to her great talents and overall endearment to her people, she is a symbol of national pride to the people from Iran.",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "googoosh.jpg", googooshFeatures);
-
-        Map<String, String>paletFeatures = new HashMap<String, String>();
-        paletFeatures.put("Genre", "Persian Fusion");
-        paletFeatures.put("Genre", "Persian Jazz");
-        artistServiceProvider.addNewArtist("Pallet", "Formed in November 2010, Pallet is an Iranian Fusion/Jazz band, consisting of Daryoush Azar, Rouzbeh Esfandarmaz, Kaveh Salehi, Mahyar Tahmasebi, Hesam Mohammadinanpour &" +
-                                           " Omid Nemati; with collaborators such as Khatereh Hakimi, Mehdi Saki & Faraz Aghili.",
-                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "pallet.jpg", paletFeatures);
-
-        Map<String, String>martikFeatures = new HashMap<String, String>();
-        martikFeatures.put("Genre", "Persian 6/8 Dance");
-        martikFeatures.put("Genre", "Persian Pop");
-        artistServiceProvider.addNewArtist("Martik", "Martik Gharakhanian, was born on July 17, 1949 Abadan/Iran. He began his professional musical career at the age of fifteen, has been at the helm of the contemporary Iranian music " +
-                                           "scene for the past 40 years, and remains one of its most popular and beloved stars.In addition to being a gifted guitarist and songwriter, he is blessed" +
-                                           " with a soulful voice that is endowed with a unique tonality, tenderness, and velvety softness that mesmerizes his audience. In the 1970’s, he helped " +
-                                           "bring the best of Classic Rock and R&B to a thirsty and appreciative audience in Iran. ",
-                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "martik.jpg", martikFeatures);
-
-        Map<String, String>siavashGhomeyshiFeatures = new HashMap<String, String>();
-        siavashGhomeyshiFeatures.put("Genre", "Persian Pop");
-        artistServiceProvider.addNewArtist("Siavash Ghomeyshi", "Siavash Ghomayshi was born 11 June 1945 in Ahvaz, Iran. He is an Iranian musician, singer and song writer. Siavash" +
-                                           " studied music in London where he received his Master's degree from Royal Society of Arts. He left Iran after 1978 and now lives in Los Angeles." +
-                                           "He started his career as a composer when he was just 12. Siavash holds a Master's degree in classical jazz from Royal Society of Arts in London, England,",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "siavash-ghomeyshi.jpg", siavashGhomeyshiFeatures);
-
-        Map<String, String>farhadFeatures = new HashMap<String, String>();
-        farhadFeatures.put("Genre", "Persian Jazz");
-        artistServiceProvider.addNewArtist("Farhad", "Farhad Mehrad was born on January 20, 1944. He was widely known in Iran as Farhad was an award winning Iranian rock singer," +
-                                           " songwriter, guitarist, pianist and icon. He rose to prominence among Iranian rock and folk musicians before the Iranian Revolution, but after" +
-                                           " the revolution he was banned from singing for several years. His first concert after the Iranian Revolution was held in 1993. To this day he is" +
-                                           " considered one of the most influential and respected Iranian artists of all time.",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "farhad.jpg", farhadFeatures);
-
-
-        Map<String, String>haydehFeatures = new HashMap<String, String>();
-        haydehFeatures.put("Genre", "Persian Jazz");
-        artistServiceProvider.addNewArtist("Hayedeh", "Hayedeh, Masoumeh Dadehbala, was born on April 10, 1942. She was an Iranian singer with a contralto vocal range. In a career spanning more " +
-                                            "than two decades, she had countless number of hits. Two decades after her death, Hayedeh is considered one of the most influential and iconic Persian" +
-                                           " vocalists of all time and is still recognized as one of the Iran's most famous and distinguished singers of the 20th century. She passed away on January 20, 1990",
-                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "hayedeh.jpg", haydehFeatures);
-
-        Map<String, String>mohsenChavoshiFeatures = new HashMap<String, String>();
-        mohsenChavoshiFeatures.put("Genre", "Persian Slow Pop");
-        mohsenChavoshiFeatures.put("Genre", "Persian Electronic");
-        artistServiceProvider.addNewArtist("Mohsen Chavoshi", "Mohsen Chavoshi Hosseini was born 30 July 1979 is an Iranian musician, singer, record producer and songwriter. He lives in Tehran " +
-                                           "He has released nine albums including a soundtrack to 2007 film Santouri",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "mohsen-chavoshi.jpg", mohsenChavoshiFeatures);
-
-
-        Map<String, String>chaartarFeatures = new HashMap<String, String>();
-        chaartarFeatures.put("Genre", "Persian Fusion");
-        chaartarFeatures.put("Genre", "Persian Electronic");
-        artistServiceProvider.addNewArtist("Chaartaar", "Chaartaar Band",
-                commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "chaartaar.jpg", chaartarFeatures);
-
-
-        Map<String, String>sirvanFeatures = new HashMap<String, String>();
-        sirvanFeatures.put("Genre", "Persian Fusion");
-        sirvanFeatures.put("Genre", "Persian Electronic");
-        artistServiceProvider.addNewArtist("Sirvan", "Sirvan Khosravi is an Iranian pop singer, musician, composer, music arranger, voice recorder and recording supervisor." +
-                                            " He is older brother of Xaniar Khosravi, who is also a Pop and Rap singer. ",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "sirvan-khosravi.jpg", sirvanFeatures);
-
-
-        Map<String, String>darisuhFeatures = new HashMap<String, String>();
-        darisuhFeatures.put("Genre", "Persian Pop");
-        darisuhFeatures.put("Genre", "Persian Slow Pop");
-        artistServiceProvider.addNewArtist("Dariush", "Dariush Eghbali better known by his stage name Dariush is an Iranian singer and songwriter best known for his " +
-                                           "warm and poignant bass voice heard in both ballads and socio- political songs.",
-                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "dariush.jpg", darisuhFeatures);
-
-
-
-        Map<String, String>marjanFarsadFeatures = new HashMap<String, String>();
-        marjanFarsadFeatures.put("Genre", "Persian Slow Pop");
-        artistServiceProvider.addNewArtist("Marjan Farsad", "Born in 1983 in Tehran, Iran, Marjan Farsad is an animation filmmaker, illustrator, " +
-                                           "singer and songwriter. Her first collection of romantic songs from Marjan Farsad which takes a new direction " +
-                                            "in Iranian contemporary music with a dream-like and nostalgic mood.",
-                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "marjan-farsad.jpg", marjanFarsadFeatures);
+//        Map<String, String>martikFeatures = new HashMap<String, String>();
+//        martikFeatures.put("Genre", "Persian Pop");
+//        artistServiceProvider.addNewArtist("Martik", "Martik Gharakhanian, was born on July 17, 1949 Abadan/Iran. He began his professional musical career at the age of fifteen, has been at the helm of the contemporary Iranian music " +
+//                                           "scene for the past 40 years, and remains one of its most popular and beloved stars.In addition to being a gifted guitarist and songwriter, he is blessed" +
+//                                           " with a soulful voice that is endowed with a unique tonality, tenderness, and velvety softness that mesmerizes his audience. In the 1970’s, he helped " +
+//                                           "bring the best of Classic Rock and R&B to a thirsty and appreciative audience in Iran. ",
+//                                           commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "martik.jpg", martikFeatures);
+//
+//        Map<String, String>siavashGhomeyshiFeatures = new HashMap<String, String>();
+//        siavashGhomeyshiFeatures.put("Genre", "Persian Pop");
+//        artistServiceProvider.addNewArtist("Siavash Ghomeyshi", "Siavash Ghomayshi was born 11 June 1945 in Ahvaz, Iran. He is an Iranian musician, singer and song writer. Siavash" +
+//                                           " studied music in London where he received his Master's degree from Royal Society of Arts. He left Iran after 1978 and now lives in Los Angeles." +
+//                                           "He started his career as a composer when he was just 12. Siavash holds a Master's degree in classical jazz from Royal Society of Arts in London, England,",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "siavash-ghomeyshi.jpg", siavashGhomeyshiFeatures);
+//
+//        Map<String, String>farhadFeatures = new HashMap<String, String>();
+//        farhadFeatures.put("Genre", "Persian Jazz");
+//        artistServiceProvider.addNewArtist("Farhad", "Farhad Mehrad was born on January 20, 1944. He was widely known in Iran as Farhad was an award winning Iranian rock singer," +
+//                                           " songwriter, guitarist, pianist and icon. He rose to prominence among Iranian rock and folk musicians before the Iranian Revolution, but after" +
+//                                           " the revolution he was banned from singing for several years. His first concert after the Iranian Revolution was held in 1993. To this day he is" +
+//                                           " considered one of the most influential and respected Iranian artists of all time.",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "farhad.jpg", farhadFeatures);
+//
+//
+//        Map<String, String>haydehFeatures = new HashMap<String, String>();
+//        haydehFeatures.put("Genre", "Persian Pop");
+//        artistServiceProvider.addNewArtist("Hayedeh", "Hayedeh, Masoumeh Dadehbala, was born on April 10, 1942. She was an Iranian singer with a contralto vocal range. In a career spanning more " +
+//                                            "than two decades, she had countless number of hits. Two decades after her death, Hayedeh is considered one of the most influential and iconic Persian" +
+//                                           " vocalists of all time and is still recognized as one of the Iran's most famous and distinguished singers of the 20th century. She passed away on January 20, 1990",
+//                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "hayedeh.jpg", haydehFeatures);
+//
+//        Map<String, String>mohsenChavoshiFeatures = new HashMap<String, String>();
+//        mohsenChavoshiFeatures.put("Genre", "Persian Slow Pop");
+//        artistServiceProvider.addNewArtist("Mohsen Chavoshi", "Mohsen Chavoshi Hosseini was born 30 July 1979 is an Iranian musician, singer, record producer and songwriter. He lives in Tehran " +
+//                                           "He has released nine albums including a soundtrack to 2007 film Santouri",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "mohsen-chavoshi.jpg", mohsenChavoshiFeatures);
+//
+//
+//        Map<String, String>chaartarFeatures = new HashMap<String, String>();
+//
+//        chaartarFeatures.put("Genre", "Persian Electronic");
+//        artistServiceProvider.addNewArtist("Chaartaar", "Chaartaar Band",
+//                commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "chaartaar.jpg", chaartarFeatures);
+//
+//
+//        Map<String, String>sirvanFeatures = new HashMap<String, String>();
+//       
+//        sirvanFeatures.put("Genre", "Persian Electronic");
+//        artistServiceProvider.addNewArtist("Sirvan", "Sirvan Khosravi is an Iranian pop singer, musician, composer, music arranger, voice recorder and recording supervisor." +
+//                                            " He is older brother of Xaniar Khosravi, who is also a Pop and Rap singer. ",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "sirvan-khosravi.jpg", sirvanFeatures);
+//
+//
+//        Map<String, String>darisuhFeatures = new HashMap<String, String>();
+//        darisuhFeatures.put("Genre", "Persian Pop");
+//
+//        artistServiceProvider.addNewArtist("Dariush", "Dariush Eghbali better known by his stage name Dariush is an Iranian singer and songwriter best known for his " +
+//                                           "warm and poignant bass voice heard in both ballads and socio- political songs.",
+//                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "dariush.jpg", darisuhFeatures);
+//
+//
+//
+//        Map<String, String>marjanFarsadFeatures = new HashMap<String, String>();
+//        marjanFarsadFeatures.put("Genre", "Persian Fusion");
+//        artistServiceProvider.addNewArtist("Marjan Farsad", "Born in 1983 in Tehran, Iran, Marjan Farsad is an animation filmmaker, illustrator, " +
+//                                           "singer and songwriter. Her first collection of romantic songs from Marjan Farsad which takes a new direction " +
+//                                            "in Iranian contemporary music with a dream-like and nostalgic mood.",
+//                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "marjan-farsad.jpg", marjanFarsadFeatures);
 
 
         Map<String, String>erfanFeatures = new HashMap<String, String>();
@@ -352,7 +349,7 @@ public class InitArtist extends AbstractController {
                                            commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "mohsen-namjoo.jpg", mohsenNamjooFeatures);
 
         Map<String, String>trafficBandFeatures = new HashMap<String, String>();
-        trafficBandFeatures.put("Genre", "Persian Electronic");
+        trafficBandFeatures.put("Genre", "Persian Rock");
                                             artistServiceProvider.addNewArtist("Traffic Band", "Not Enough Information Available",
                                             commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "traffic.jpg", trafficBandFeatures);
 
@@ -362,7 +359,7 @@ public class InitArtist extends AbstractController {
                                          commonFile.getInitartistartworkpath() + commonFile.getSeparator() + "morteza-ahmadi.jpg", mortezaAhmadiFeatures);
 
         Map<String, String>shadmehrAghiliFeatures = new HashMap<String, String>();
-        shadmehrAghiliFeatures.put("Genre", "Persian Pop");
+        shadmehrAghiliFeatures.put("Genre", "Persian Electronic");
         artistServiceProvider.addNewArtist("Shadmehr Aghili", "Shadmehr Aghili was born 27 January 1973. He is an Iranian pop singer, musician, composer," +
                 " music arranger, producer and song-writer, and formerly an actor. Aghili was born in Tehran, Iran. He emigrated to Canada first," +
                 " but currently resides in Los Angeles. Aghili started early in music and studied piano, guitar and violin, graduated from the Tehran" +

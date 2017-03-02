@@ -61,7 +61,7 @@
                 <prop key="/facebookLogin.ajax">facebookLoginController</prop>
                 <prop key="/perSetStationSong.ajax">preSetSongsController</prop>
                 <prop key="/deleteUserStation.ajax">deleteUserStationController</prop>
-                <prop key="/likedSongStationController.ajax">likedSongStationController</prop>
+                <prop key="/likedSongStationController.ajax">likedSongsStationController</prop>
                 <prop key="/bitRateSongsStationController.ajax">bitRateSongsStationController</prop>
             </props>
         </property>
@@ -73,8 +73,8 @@
         <property name="songServiceProvider" ref="songFacede"/>
         <property name="commonFile" ref="commonFile"/>
     </bean>
-     <bean class="com.radio.svc.controllers.radio.BitrateSongsStationController" id="bitRateSongStationController">
-        <property name="stationServiceProvider" ref="stationFacade"/>
+     <bean class="com.radio.svc.controllers.radio.BitrateSongsStationController" id="bitRateSongsStationController">
+        <!--<property name="stationServiceProvider" ref="stationFacade"/>-->
         <property name="userServiceProvider" ref="userFacade"/>
         <property name="songServiceProvider" ref="songFacede"/>
         <property name="commonFile" ref="commonFile"/>

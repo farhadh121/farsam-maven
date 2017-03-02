@@ -12,6 +12,7 @@ import com.radio.svc.controllers.radio.jsonentities.StationRequest;
 import com.radio.svc.exceptions.SongNotExistsException;
 import com.radio.svc.exceptions.UserNotExistsException;
 import com.radio.svc.serviceinterface.ISongServiceProvider;
+import com.radio.svc.serviceinterface.IStationServiceProvider;
 import com.radio.svc.serviceinterface.IUserServiceProvider;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,10 +30,12 @@ import java.util.Set;
  * Created by farhad on 11/25/2015
  */
 
-@Controller
 public class BitrateSongsStationController {
 
     private ISongServiceProvider songServiceProvider;
+    private IStationServiceProvider stationServicePropvider;
+
+   
     private IUserServiceProvider userServiceProvider;
     private CommonFile commonFile;
 
@@ -58,6 +61,14 @@ public class BitrateSongsStationController {
     public void setUserServiceProvider(IUserServiceProvider userServiceProvider) {
         this.userServiceProvider = userServiceProvider;
     }
+    
+     public IStationServiceProvider getStationServicePropvider() {
+        return stationServicePropvider;
+    }
+
+    public void setStationServicePropvider(IStationServiceProvider stationServicePropvider) {
+        this.stationServicePropvider = stationServicePropvider;
+    }
 
     @RequestMapping(value = "/bitRateSongsStationController.ajax", method = RequestMethod.POST)
     @ResponseBody
@@ -71,6 +82,7 @@ public class BitrateSongsStationController {
         String resultSongTitle = null;
         String resultSongArtist = null;
         String resultArtistInfo = null;
+        String resultSongPath = null;
         Long resultSongID = null;
         boolean resultLikeStatus = false;
         boolean resultDislikeStatus = false;
@@ -103,7 +115,7 @@ public class BitrateSongsStationController {
             resultSongID = result.getSongID();
 
             resultSongTitle = result.getName();
-
+            resultSongPath = result.getMp3Path();
             //System.out.print(temp.getArtists());
 
 
@@ -156,7 +168,7 @@ public class BitrateSongsStationController {
 
 
         NextSongResult nextSongResult = new NextSongResult();
-        nextSongResult.setUrl(commonFile.getDomain()+"/songs/" + result);
+        nextSongResult.setUrl(commonFile.getDomain()+"/songs/" + resultSongPath);
         nextSongResult.setArtWorkUrl(commonFile.getDomain()+"/song-artwork/" + resultSongArtWork);
         nextSongResult.setTitle(resultSongTitle);
         nextSongResult.setArtist(resultSongArtist);
