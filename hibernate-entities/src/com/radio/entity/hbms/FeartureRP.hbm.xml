@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-lazy="false">
+    <class name="com.radio.entity.hibernate.FeatureRPEntity" optimistic-lock="version" table="Feature">
+        <id name="songFeatureID">
+            <column name="SongFeatureID" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <timestamp name="version" source="db"/>
+        <id name="FeatureRPID" type="java.lang.Integer">
+            <column name="SongID" />
+            <generator class="foreign">
+                <param name="property">Song</param>
+            </generator>
+        </id>
+        <one-to-one name="Song" class="com.radio.entity.hibernate.SongEntity"
+                            constrained="true" fetch="select" name="owner">
+        </one-to-one>
+        
+        <property name="rp1">
+            <column name="RP1" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp2">
+            <column name="RP2" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp3">
+            <column name="RP3" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp4">
+            <column name="RP4" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp5">
+            <column name="RP5" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp6">
+            <column name="RP6" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp7">
+            <column name="RP7" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp8">
+            <column name="RP8" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp9">
+            <column name="RP9" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp10">
+            <column name="RP10" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp11">
+            <column name="RP11" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp12">
+            <column name="RP12" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp13">
+            <column name="RP13" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp14">
+            <column name="RP14" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp15">
+            <column name="RP15" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp16">
+            <column name="RP16" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp17">
+            <column name="RP17" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp18">
+            <column name="RP18" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp19">
+            <column name="RP19" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp20">
+            <column name="RP20" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp21">
+            <column name="RP21" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp22">
+            <column name="RP22" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp23">
+            <column name="RP23" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp24">
+            <column name="RP24" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp25">
+            <column name="RP25" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp26">
+            <column name="RP26" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp27">
+            <column name="RP27" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp28">
+            <column name="RP28" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp29">
+            <column name="RP29" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp30">
+            <column name="RP30" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp31">
+            <column name="RP31" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp32">
+            <column name="RP32" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp33">
+            <column name="RP33" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp34">
+            <column name="RP34" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp35">
+            <column name="RP35" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp36">
+            <column name="RP36" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp37">
+            <column name="RP37" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp38">
+            <column name="RP38" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp39">
+            <column name="RP39" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp40">
+            <column name="RP40" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp41">
+            <column name="RP41" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp42">
+            <column name="RP42" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp43">
+            <column name="RP43" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp44">
+            <column name="RP44" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp45">
+            <column name="RP45" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp46">
+            <column name="RP46" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp47">
+            <column name="RP47" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp48">
+            <column name="RP48" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp49">
+            <column name="RP49" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp50">
+            <column name="RP50" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp51">
+            <column name="RP51" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp52">
+            <column name="RP52" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp53">
+            <column name="RP53" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp54">
+            <column name="RP54" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp55">
+            <column name="RP55" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp56">
+            <column name="RP56" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp57">
+            <column name="RP57" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp58">
+            <column name="RP58" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp59">
+            <column name="RP59" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp60">
+            <column name="RP60" sql-type="varchar(300)"/>
+        </property>
+        <property name="rp61">
+            <column name="RP61" sql-type="varchar(300)"/>
+        </property>    
+    </class>
+</hibernate-mapping>
+

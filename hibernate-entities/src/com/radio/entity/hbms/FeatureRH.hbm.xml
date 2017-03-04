@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-lazy="false">
+    <class name="com.radio.entity.hibernate.FeatureRHEntity" optimistic-lock="version" table="Feature">
+        <id name="songFeatureID">
+            <column name="SongFeatureID" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <timestamp name="version" source="db"/>
+        <id name="FeatureRHID" type="java.lang.Integer">
+            <column name="SongID" />
+            <generator class="foreign">
+                <param name="property">Song</param>
+            </generator>
+        </id>
+        <one-to-one name="Song" class="com.radio.entity.hibernate.SongEntity"
+                            constrained="true" fetch="select" name="owner">
+        </one-to-one>
+        
+        <property name="rh1">
+            <column name="RH1" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh2">
+            <column name="RH2" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh3">
+            <column name="RH3" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh4">
+            <column name="RH4" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh5">
+            <column name="RH5" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh6">
+            <column name="RH6" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh7">
+            <column name="RH7" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh8">
+            <column name="RH8" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh9">
+            <column name="RH9" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh10">
+            <column name="RH10" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh11">
+            <column name="RH11" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh12">
+            <column name="RH12" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh13">
+            <column name="RH13" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh14">
+            <column name="RH14" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh15">
+            <column name="RH15" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh16">
+            <column name="RH16" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh17">
+            <column name="RH17" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh18">
+            <column name="RH18" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh19">
+            <column name="RH19" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh20">
+            <column name="RH20" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh21">
+            <column name="RH21" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh22">
+            <column name="RH22" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh23">
+            <column name="RH23" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh24">
+            <column name="RH24" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh25">
+            <column name="RH25" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh26">
+            <column name="RH26" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh27">
+            <column name="RH27" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh28">
+            <column name="RH28" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh29">
+            <column name="RH29" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh30">
+            <column name="RH30" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh31">
+            <column name="RH31" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh32">
+            <column name="RH32" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh33">
+            <column name="RH33" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh34">
+            <column name="RH34" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh35">
+            <column name="RH35" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh36">
+            <column name="RH36" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh37">
+            <column name="RH37" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh38">
+            <column name="RH38" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh39">
+            <column name="RH39" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh40">
+            <column name="RH40" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh41">
+            <column name="RH41" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh42">
+            <column name="RH42" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh43">
+            <column name="RH43" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh44">
+            <column name="RH44" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh45">
+            <column name="RH45" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh46">
+            <column name="RH46" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh47">
+            <column name="RH47" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh48">
+            <column name="RH48" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh49">
+            <column name="RH49" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh50">
+            <column name="RH50" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh51">
+            <column name="RH51" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh52">
+            <column name="RH52" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh53">
+            <column name="RH53" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh54">
+            <column name="RH54" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh55">
+            <column name="RH55" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh56">
+            <column name="RH56" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh57">
+            <column name="RH57" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh58">
+            <column name="RH58" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh59">
+            <column name="RH59" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh60">
+            <column name="RH60" sql-type="varchar(300)"/>
+        </property>
+        <property name="rh61">
+            <column name="RH61" sql-type="varchar(300)"/>
+        </property>    
+    </class>
+</hibernate-mapping>
+
