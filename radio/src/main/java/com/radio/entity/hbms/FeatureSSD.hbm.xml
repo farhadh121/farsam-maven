@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-lazy="false">
+    <class name="com.radio.entity.hibernate.FeatureSSDEntity" optimistic-lock="version" table="FeatureSSD">
+        <id name="FeatureSSDID">
+            <column name="FeatureSSDID" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <timestamp name="version" source="db"/>
+        <id name="FeatureSSDID" type="java.lang.Integer">
+            <column name="SongID" />
+            <generator class="foreign">
+                <param name="property">Song</param>
+            </generator>
+        </id>
+        <one-to-one name="Song" class="com.radio.entity.hibernate.SongEntity"
+                            constrained="true" fetch="select" name="owner">
+        </one-to-one>
+        
+        <property name="ssd">
+            <column name="SSD" sql-type="varchar(300)"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="true" default-lazy="false">
+    <class name="com.radio.entity.hibernate.UserEntity"
+           table="User" optimistic-lock="version">
+
+        <id name="userID">
+            <column name="UserID" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <timestamp name="version" source="db"/>
+
+		<property name="email">
+			<column name="Email" sql-type="varchar(100)"/>
+		</property>
+		
+		<property name="password">
+			<column name="Password" sql-type="varchar(100)"/>
+		</property>
+		
+		<property name="bornDate">
+			<column name="BornDate" sql-type="DATE"/>
+		</property>
+		
+		<property name="firstName">
+			<column name="FirstName" sql-type="varchar(100)"/>
+		</property>
+		<property name="lastName">
+			<column name="LastName" sql-type="varchar(100)"/>
+		</property>
+
+		<property name="imageURL">
+            <column name="imageUrl" sql-type="varchar(100)"/>
+		</property>
+
+		<set name="roles" table="user_role" lazy="true" cascade="none" inverse="false">
+			<key>
+				<column name="UserID" not-null="true"/>
+			</key>
+			<many-to-many entity-name="com.radio.entity.hibernate.RoleEntity">
+				<column name="RoleID" not-null="true"/>
+			</many-to-many>
+		</set>
+
+        <set name="ownedStations" table="Station" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true"/>
+            </key>
+            <one-to-many class="com.radio.entity.hibernate.StationEntity"/>
+        </set>
+        <!-- Farhad Added Testing Like-->
+        <set name="likedSongs" table="user_like" lazy="true" cascade="none" inverse="false">
+            <key>
+                <column name="UserID" not-null="true"/>
+            </key>
+            <many-to-many entity-name="com.radio.entity.hibernate.SongEntity">
+                <column name="SongID" not-null="true"/>
+            </many-to-many>
+        </set>
+
+        <set name="dislikedSongs" table="user_dislike" lazy="true" cascade="none" inverse="false">
+            <key>
+                <column name="UserID" not-null="true"/>
+            </key>
+            <many-to-many entity-name="com.radio.entity.hibernate.SongEntity">
+                <column name="SongID" not-null="true"/>
+            </many-to-many>
+        </set>
+
+				
+	</class>
+</hibernate-mapping>
