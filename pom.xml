@@ -8,7 +8,7 @@
 
 	<packaging>war</packaging>
 
-	<name>radio</name>
+	<name></name>
 
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
