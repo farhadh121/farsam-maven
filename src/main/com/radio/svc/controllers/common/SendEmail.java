@@ -18,10 +18,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-/**
- *
- * @author Siriquelle
- */
+
 public class SendEmail {
 
     public static boolean run(String addressedTo, String subject, String content) {

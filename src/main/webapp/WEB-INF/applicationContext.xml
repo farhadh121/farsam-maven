@@ -169,20 +169,6 @@
     </bean>
 
     <!-- End search beans -->
-     <!-- FeatureSSD beans -->
-    <bean class="com.radio.svc.dalc.hibernate.FeatureSSDDA" id="featureSSD">
-        <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-
-    <bean class="com.radio.svc.logic.FeatureSSDLogic" id="featureSSDLogic">
-        <property name="songDA" ref="songDA"/>
-        <property name="featureSSD" ref="featureSSD"/>
-    </bean>
-
-    <bean class="com.radio.svc.facade.FeatureSSDFacade" id="featureSSDFacade">
-        <property name="featureSSDLogic" ref="featureSSDLogic"/>
-    </bean>
-    <!-- FeatureSSD beans -->
 
     <!-- station beans -->
 
