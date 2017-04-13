@@ -229,10 +229,7 @@
     <bean class="com.radio.svc.controllers.admin.SearchAlbumController" name="/searchAlbumController.htm">
         <property name="albumServiceProvider" ref="albumFacade"/>
     </bean>
-     <bean class="com.radio.svc.controllers.admin.AddFeatureSSDController" name="/addFeatureSSDController.htm">
-        <property name="featureSSDServiceProvider" ref="featureSSDFacade"/>
-    </bean>
-    
+
     
     <bean class="com.radio.svc.controllers.admin.InitSystem" name="/InitSystemController.htm">
         <property name="albumServiceProvider" ref="albumFacade"/>
