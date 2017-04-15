@@ -12,7 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import org.springframework.security.core.userdetails.User;
+import java.util.concurrent.atomic.AtomicLong;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 import java.io.IOException;
 
@@ -38,7 +43,7 @@ public class CreateStationController {
 
     @RequestMapping( value = "/createStation.ajax", method = RequestMethod.POST )
     @ResponseBody
-    public String createStation( @RequestBody String json ) throws Exception{
+    public String createStation( @RequestParam @RequestBody String json ) throws Exception{
 
 
         ObjectMapper objectMapper = new ObjectMapper();
