@@ -6,12 +6,12 @@
 <body class="bg-info dker">
 <section id="content" class="m-t-lg wrapper-md animated fadeInUp">
     <div class="container aside-xl">
-        <a class="navbar-brand block" href="../front/index.jsp"><span class="h1 font-bold">Musik</span></a>
+        <a class="navbar-brand block" href="../front/index.jsp"><span class="h1 font-bold">MuDik</span></a>
         <section class="m-b-lg">
             <header class="wrapper text-center">
-                <strong>Sign in to get in touch</strong>
+                <strong>Sign in</strong>
             </header>
-            <form action="/perform_login" method="POST">
+            <form action="/radio/perform_login" method="POST">
                 <div class="form-group">
                     <input type="email" name="j_username" placeholder="Email" class="form-control rounded input-lg text-center no-border">
                 </div>
@@ -39,7 +39,7 @@
 <footer id="footer">
     <div class="text-center padder">
         <p>
-            <small>Web app framework base on Bootstrap<br>Â© 2014</small>
+            <small>MuDic.co <br>FarSam LLC © 2016</small>
         </p>
     </div>
 </footer>

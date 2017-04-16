@@ -43,7 +43,7 @@ public class CreateStationController {
 
     @RequestMapping( value = "/createStation.ajax", method = RequestMethod.POST )
     @ResponseBody
-    public String createStation( @RequestParam @RequestBody String json ) throws Exception{
+    public String createStation( @RequestBody String json ) throws Exception{
 
 
         ObjectMapper objectMapper = new ObjectMapper();

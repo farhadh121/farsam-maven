@@ -8,8 +8,8 @@
         <property name="placeholderPrefix" value="${taghcheh_"/>
         <property name="locations">
             <list>
-                <value>WEB-INF/taghcheh.properties</value>
-                <value>WEB-INF/ui.properties</value>
+                <value>/WEB-INF/taghcheh.properties</value>
+                <value>/WEB-INF/ui.properties</value>
             </list>
         </property>
     </bean>
