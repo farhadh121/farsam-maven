@@ -6,19 +6,6 @@
 	<artifactId>radio</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<build>
-
-		<plugins>
-
-			<plugin>
-				<groupId>co.mudic</groupId>
-				<artifactId>radio</artifactId>
-				<version>1.0-SNAPSHOT</version>
-			</plugin>
-
-		</plugins>
-
-	</build>
 
 	<packaging>war</packaging>
 
@@ -261,6 +248,11 @@
 
 	<build>
 		<plugins>
+            <plugin>
+                <groupId>co.mudic</groupId>
+                <artifactId>radio</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
