@@ -48,7 +48,6 @@
             	<value>/com/radio/entity/hbms/RecordLabel.hbm.xml</value>
 				<value>/com/radio/entity/hbms/Album.hbm.xml</value>
 				<value>/com/radio/entity/hbms/Artist.hbm.xml</value>
-
                 <value>/com/radio/entity/hbms/Category.hbm.xml</value>
 				<value>/com/radio/entity/hbms/Genre.hbm.xml</value>
 				<value>/com/radio/entity/hbms/Role.hbm.xml</value>

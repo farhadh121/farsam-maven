@@ -104,14 +104,14 @@ public class InitSystem extends AbstractController  {
         //roleServiceProvider.addRole("ROLE_ADMIN");
 
         //Adding User
-       /* List<String> roles = new LinkedList<String>();
+    	List<String> roles = new LinkedList<String>();
         roles.add("ROLE_ADMIN");
         Date date = new SimpleDateFormat("yyyyMMdd").parse("20140101");
-        userServiceProvider.addUser("farhadh121@gmail.com","123456","admin", "admin", date,roles);*/
+        userServiceProvider.addUser("farhadh121@gmail.com","123456","admin", "admin", date,roles);
 
 
         // Adding Genres
-        /*genreServiceProvider.addNewGenre("Persian Rock");
+       /* genreServiceProvider.addNewGenre("Persian Rock");
         genreServiceProvider.addNewGenre("Persian Jazz");
         genreServiceProvider.addNewGenre("Persian Latin");
         genreServiceProvider.addNewGenre("Persian 6/8 Dance");
@@ -137,7 +137,7 @@ public class InitSystem extends AbstractController  {
 
 
         /*Adding Record Label*/
-        recordLabelServiceProvider.addNewRecordLabel("Unknown", commonFile.getInitrecordlabelartworkpath() + commonFile.getSeparator() + "no-image.jpg");
+       /* recordLabelServiceProvider.addNewRecordLabel("Unknown", commonFile.getInitrecordlabelartworkpath() + commonFile.getSeparator() + "no-image.jpg");
         recordLabelServiceProvider.addNewRecordLabel("Taraneh", commonFile.getInitrecordlabelartworkpath() + commonFile.getSeparator() + "taraneh.jpg");
         recordLabelServiceProvider.addNewRecordLabel("Tapesh",commonFile.getInitrecordlabelartworkpath() + commonFile.getSeparator() + "no-image.jpg");
         recordLabelServiceProvider.addNewRecordLabel("Caltex",commonFile.getInitrecordlabelartworkpath() + commonFile.getSeparator() + "caltex.jpg");
@@ -160,7 +160,7 @@ public class InitSystem extends AbstractController  {
   
 
 
-
+*/
 
         //Adding Song
 
