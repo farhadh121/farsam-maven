@@ -29,7 +29,7 @@ public class SongFacede implements ISongServiceProvider {
 
     //////////////////////////////////////////
 
-    @Override
+   // @Override
     public void addNewSong(String songName, Set<String> songArtists, String lyric, String songGenre, String albumName, FileItem songFile, FileItem artworkFile, Map<String, String> features) throws
             SongExistException,
             ArtistNotExistException,
@@ -137,14 +137,14 @@ public class SongFacede implements ISongServiceProvider {
     }
 
 
-    @Override
+    //@Override
     public List<SongEntity> getAllSongs() {
 
         return songLogic.getAllSongs();
 
     }
 
-    @Override
+    //@Override
     public List<ArtistEntity> getSongArtists(Long songId) throws SongNotExistsException {
 
         SongEntity songEntity = new SongEntity();
@@ -154,7 +154,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+    //@Override
     public AlbumEntity getSongAlbum(Long songId) throws SongNotExistsException {
 
         SongEntity songEntity = new SongEntity();
@@ -164,7 +164,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+    //@Override
     public List<GenreEntity> getSongGenre(Long songId) throws SongNotExistsException {
 
         SongEntity songEntity = new SongEntity();
@@ -174,7 +174,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+   // @Override
     public void deleteSong(Long songId) throws
             SongNotExistsException,
             FileNotExistsException {
@@ -186,7 +186,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+   // @Override
     public void editSong (Long oldSongId, String songName, Set<String> songArtists, String lyric, String songGenre, String albumName, FileItem songFile, FileItem artworkFile) throws
             SongNotExistsException,
             FileNotExistsException,
@@ -200,7 +200,7 @@ public class SongFacede implements ISongServiceProvider {
         //addNewSong(songName, songArtists, lyric, songGenre, albumName, songFile, artworkFile);
     }
 
-    @Override
+   // @Override
     public String getNextSong(Long stationID) throws
             StationNotExistsException,
             Exception {
@@ -213,7 +213,7 @@ public class SongFacede implements ISongServiceProvider {
     }
 
 
-    @Override
+  //  @Override
     public SongEntity getSongByName(String songName) throws
             SongNotExistsException {
 
@@ -224,7 +224,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+    //@Override
     public SongEntity getSongByID(Long songId) throws SongNotExistsException {
         SongEntity temp = new SongEntity();
         temp.setSongID( songId );
@@ -233,7 +233,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+  //  @Override
     public String changeSongName(Long songID, String songName) throws
             SongNotExistsException {
 
@@ -243,7 +243,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+   // @Override
     public String changeSongAlbum(Long songID, String albumName) throws
             SongNotExistsException,
             AlbumNotExistException {
@@ -257,7 +257,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+   // @Override
     public String changeSongLyric(Long songID, String lyric) throws
             SongNotExistsException {
 
@@ -268,7 +268,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+  //  @Override
     public String changeSongGenre(Long songID, String genre) throws
             SongNotExistsException,
             GenreNotExistsException {
@@ -283,7 +283,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+  //  @Override
     public int getNumberOfLikes (Long songID) throws
             SongNotExistsException{
         SongEntity temp = new SongEntity();
@@ -292,7 +292,7 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+    //@Override
     public int getNumberOfDislikes(Long songID) throws
             SongNotExistsException{
         SongEntity temp = new SongEntity();
@@ -301,13 +301,13 @@ public class SongFacede implements ISongServiceProvider {
 
     }
 
-    @Override
+    //@Override
     public List<SongEntity> getTopSongs() throws
             SongNotExistsException{
         return songLogic.getTopSongs();
     }
     
-    @Override
+   // @Override
     public SongEntity getSongsByBitrate(int bitRate) throws
             SongNotExistsException{
         SongEntity temp = new SongEntity();

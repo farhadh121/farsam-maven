@@ -69,7 +69,6 @@ public class SongSelectorByGenre implements ISongSelector {
         this.commonFile = commonFile;
     }
 
-    @Override
     public String getNextSongByFeature(Map<String, String> features) throws
             GenreNotExistsException,
             UserNotExistsException {
@@ -84,6 +83,7 @@ public class SongSelectorByGenre implements ISongSelector {
 
 
         genreName = features.get( "Genre" );
+        //Instead of calling listSongsByGenre we need to call the python code that returns 3 song IDs
         List<SongEntity> songEntities = songLogic.listSongsByGenre( genreName );
 
 

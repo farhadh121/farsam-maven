@@ -20,7 +20,7 @@ public class GenreDA extends GenericDA<GenreEntity, Long> implements IGenreDA {
 
     /////////////////////////////////////////////////////////////////
 
-    @Override
+
     public GenreEntity getGenreByName(GenreEntity genreEntity) {
 
         Criteria criteria = this.getSession().createCriteria( this.getType() );
@@ -29,7 +29,7 @@ public class GenreDA extends GenericDA<GenreEntity, Long> implements IGenreDA {
 
     }
 
-    @Override
+
     public List<SongEntity> listSongsByGenreName( GenreEntity genreEntity ){
 
         Criteria criteria = this.getSession().createCriteria( this.getType() );
