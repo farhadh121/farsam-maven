@@ -22,7 +22,7 @@ public class SearchFacade implements ISearchServiceProvider {
         this.searchLogic = searchLogic;
     }
 
-    @Override
+
     public List<SearchResult> searchByPartialName(String partialName) {
 
         return searchLogic.searchByPartialName( partialName );

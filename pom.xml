@@ -293,7 +293,7 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.0</version>
@@ -303,13 +303,13 @@
 						<contextFile>/home/farhad/git/farsam-maven/webapp/WEB-INF/applicationContext.xml</contextFile>
 						<mode>context</mode>
 						<charset>UTF-8</charset>
-						<warDirectory>target/ROOT</warDirectory>
+						<warDirectory>/opt/tomcat/apache-tomcat-7.0.75/webapps/ROOT</warDirectory>
 					</contextFile>
 					<mode>context</mode>
 					<charset>UTF-8</charset>
-					<warDirectory>target/ROOT</warDirectory>
+					<warDirectory>/opt/tomcat/apache-tomcat-7.0.75/webapps/ROOT</warDirectory>
 				</configuration>
-			</plugin>
+			</plugin>-->
 			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>

@@ -25,7 +25,7 @@ public interface IStationServiceProvider extends Serializable {
      * @throws StationExistsException           Throws when there is one exception the same as the new one you want to add.
      * @return the ID of the newly created station
      */
-    public Long createNewStationBySearchEntity( String selectedSearchType, String selectedSearchName, Long selectedSearchID, String username, String selectedSearchLyrics ) throws
+    Long createNewStationBySearchEntity( String selectedSearchType, String selectedSearchName, Long selectedSearchID, String username, String selectedSearchLyrics ) throws
             TypeNotExistException,
             EntityNotExistsException,
             UserNotExistsException,
@@ -41,7 +41,7 @@ public interface IStationServiceProvider extends Serializable {
      * @throws UserNotExistsException           Throws when there is no user with the specified username
      * @throws StationExistsException           Throws when there is one station with the specified name
      */
-    public Long createNewStation( Map<String, String> features, String name, String username ) throws
+    Long createNewStation( Map<String, String> features, String name, String username ) throws
             UserNotExistsException,
             StationExistsException;
 

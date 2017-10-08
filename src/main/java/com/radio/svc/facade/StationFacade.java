@@ -30,7 +30,7 @@ public class StationFacade implements IStationServiceProvider {
     ////////////////////////////////////////////
 
 
-    @Override
+
     public Long createNewStationBySearchEntity(String selectedSearchType, String selectedSearchName, Long selectedSearchID, String username, String selectedSearchLyrics) throws
             TypeNotExistException,
             EntityNotExistsException,
@@ -52,7 +52,7 @@ public class StationFacade implements IStationServiceProvider {
 
     }
 
-    @Override
+
     public Long createNewStation(Map<String, String> features, String name, String username) throws
             UserNotExistsException,
             StationExistsException {
@@ -67,14 +67,14 @@ public class StationFacade implements IStationServiceProvider {
 
     }
 
-    @Override
+
     public List<StationEntity> getAllStations() {
 
         return stationLogic.getAllStations();
 
     }
 
-    @Override
+
     public List<StationEntity> getAllStationsByUsername(String username) throws
             UserNotExistsException {
 
@@ -85,7 +85,7 @@ public class StationFacade implements IStationServiceProvider {
 
     }
 
-    @Override
+
     public void deleteStationById(Long id) throws
             StationNotExistsException {
 
@@ -96,7 +96,7 @@ public class StationFacade implements IStationServiceProvider {
 
     }
 
-    @Override
+
     public void deleteUserSationById(Long stationid, String username)throws
         UserNotExistsException,
         StationNotExistsException {

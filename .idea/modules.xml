@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hibernate-Entities/Hibernate-Entities.iml" filepath="$PROJECT_DIR$/Hibernate-Entities/Hibernate-Entities.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Service-Implementation/Service-Implementation.iml" filepath="$PROJECT_DIR$/Service-Implementation/Service-Implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/radio.iml" filepath="$PROJECT_DIR$/radio.iml" />
     </modules>
   </component>
 </project>
-

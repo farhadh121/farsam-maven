@@ -113,6 +113,8 @@ public class CommonFile {
      */
     private  String initartistartworkpath;
 
+    private String resourcesDomain;
+
 
 
 
@@ -222,6 +224,7 @@ public class CommonFile {
         this.dot = dot;
     }
 
+
     public String getDomain() {
         return domain;
     }
@@ -306,6 +309,11 @@ public class CommonFile {
         return Splitter.on(",").withKeyValueSeparator("=").split(in);
     }
 
+    public String getResourcesDomain() {
+        return resourcesDomain;
+    }
 
-
+    public void setResourcesDomain(String resourcesDomain) {
+        this.resourcesDomain = resourcesDomain;
+    }
 }

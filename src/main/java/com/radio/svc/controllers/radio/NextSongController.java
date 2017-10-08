@@ -3,11 +3,9 @@ package com.radio.svc.controllers.radio;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.radio.entity.hibernate.ArtistEntity;
 import com.radio.entity.hibernate.SongEntity;
-import com.radio.entity.hibernate.UserEntity;
 import com.radio.svc.common.CommonFile;
 import com.radio.svc.controllers.radio.jsonentities.NextSongRequest;
 import com.radio.svc.controllers.radio.jsonentities.NextSongResult;
-import com.radio.svc.controllers.radio.jsonentities.StationRequest;
 import com.radio.svc.exceptions.SongNotExistsException;
 import com.radio.svc.exceptions.UserNotExistsException;
 import com.radio.svc.serviceinterface.ISongServiceProvider;
@@ -19,10 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by farhad on 8/24/14.
@@ -164,8 +160,8 @@ public class NextSongController {
 
 
         NextSongResult nextSongResult = new NextSongResult();
-        nextSongResult.setUrl(commonFile.getDomain()+"/songs/" + result);
-        nextSongResult.setArtWorkUrl(commonFile.getDomain()+"/song-artwork/" + resultSongArtWork);
+        nextSongResult.setUrl(commonFile.getResourcesDomain()+"/songs/" + result);
+        nextSongResult.setArtWorkUrl(commonFile.getResourcesDomain()+"/song-artwork/" + resultSongArtWork);
         nextSongResult.setTitle(resultSongTitle);
         nextSongResult.setArtist(resultSongArtist);
         nextSongResult.setArtistInfo(resultArtistInfo);

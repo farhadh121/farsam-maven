@@ -144,7 +144,7 @@ public class StationLogic {
 
 
             // Copying song artwork to station artwork folder
-            String sourceFile = commonFile.getSongArtworksRepositoryBasePath() + commonFile.getSeparator() + songEntity.getArtworkPath();
+           /* String sourceFile = commonFile.getSongArtworksRepositoryBasePath() + commonFile.getSeparator() + songEntity.getArtworkPath();
             String destinationFile = commonFile.getStationArtworkRepositoryBasePath() + commonFile.getSeparator() + songEntity.getArtworkPath();
 
             File source = new File( sourceFile );
@@ -155,7 +155,7 @@ public class StationLogic {
             }catch ( Exception e ){
                 e.printStackTrace();
                 throw new FileNotExistsException( "File cannot be copied to destination " + destinationFile );
-            }
+            }*/
 
             stationEntity.setStationArtwork( songEntity.getArtworkPath() );
 
@@ -198,7 +198,7 @@ public class StationLogic {
                 return temp.getStationID();
             }
             // Copying song artwork to station artwork folder
-            String sourceFile = commonFile.getArtistArtworkRepositoryBasePath() + commonFile.getSeparator() + artistEntity.getArtistArtworkPath();
+            /*String sourceFile = commonFile.getArtistArtworkRepositoryBasePath() + commonFile.getSeparator() + artistEntity.getArtistArtworkPath();
             String destinationFile = commonFile.getStationArtworkRepositoryBasePath() + commonFile.getSeparator() + artistEntity.getArtistArtworkPath();
 
             File source = new File( sourceFile );
@@ -210,7 +210,7 @@ public class StationLogic {
             }catch ( Exception e ){
                 e.printStackTrace();
                 throw new FileNotExistsException( "File cannot be copied to destination " + destinationFile );
-            }
+            }*/
 
             stationEntity.setStationArtwork( artistEntity.getArtistArtworkPath() );
 
@@ -252,7 +252,7 @@ public class StationLogic {
                 //throw new StationExistsException( "Station with name " + stationEntity.getStationName() + " which belongs to " + realUserEntity.getEmail() + " Already exists in the system!" );
                 return temp.getStationID();
             }
-            // Copying song artwork to station artwork folder
+           /* // Copying song artwork to station artwork folder
             String sourceFile = commonFile.getAlbumArtworkRepositoryBasePath() + commonFile.getSeparator() + albumEntity.getAlbumArtworkPath();
             String destinationFile = commonFile.getStationArtworkRepositoryBasePath() + commonFile.getSeparator() + albumEntity.getAlbumArtworkPath();
 
@@ -264,7 +264,7 @@ public class StationLogic {
             }catch ( Exception e ){
                 e.printStackTrace();
                 throw new FileNotExistsException( "File cannot be copied to destination " + destinationFile );
-            }
+            }*/
 
             stationEntity.setStationArtwork( albumEntity.getAlbumArtworkPath() );
 
@@ -371,9 +371,9 @@ public class StationLogic {
         if( realStation == null )
             throw new StationNotExistsException( "Station with id "+ stationEntity.getStationID() + " does not exist in the system!" );
 
-        String stationArtworkPath = commonFile.getStationArtworkRepositoryBasePath() + commonFile.getSeparator() + stationEntity.getStationArtwork();
+        /*String stationArtworkPath = commonFile.getStationArtworkRepositoryBasePath() + commonFile.getSeparator() + stationEntity.getStationArtwork();
         File file = new File( stationArtworkPath );
-        file.delete();
+        file.delete();*/
 
         // deleting all station features first
         Iterator itr = realStation.getFeatures().iterator();

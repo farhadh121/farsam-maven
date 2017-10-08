@@ -80,7 +80,7 @@ public class SearchLogic {
 
             SearchResult searchResult = new SearchResult();
             searchResult.setType( "lyrics" );
-            searchResult.setArtworkPath( commonFile.getDomain() + commonFile.getSeparator() + commonFile.getSongArtworksAlias() + commonFile.getSeparator() + commonFile.getSeparator() + songEntity.getArtworkPath() );
+            searchResult.setArtworkPath( commonFile.getResourcesDomain() + commonFile.getSeparator() + commonFile.getSongArtworksAlias() + commonFile.getSeparator() + commonFile.getSeparator() + songEntity.getArtworkPath() );
             searchResult.setId( songEntity.getSongID() );
             searchResult.setName( songEntity.getLyric() );
             searchResult.setLyrics(songEntity.getLyric());
@@ -96,7 +96,7 @@ public class SearchLogic {
             SongEntity songEntity = (SongEntity)itr.next();
 
             SearchResult searchResult = new SearchResult();
-            searchResult.setArtworkPath( commonFile.getDomain() + commonFile.getSeparator() + commonFile.getSongArtworksAlias() + commonFile.getSeparator() + commonFile.getSeparator() + songEntity.getArtworkPath() );
+            searchResult.setArtworkPath( commonFile.getResourcesDomain() + commonFile.getSeparator() + commonFile.getSongArtworksAlias() + commonFile.getSeparator() + commonFile.getSeparator() + songEntity.getArtworkPath() );
             searchResult.setId( songEntity.getSongID() );
             searchResult.setName( songEntity.getName() );
 
@@ -114,7 +114,7 @@ public class SearchLogic {
             searchResult.setType( "artist" );
             searchResult.setName( artistEntity.getArtistName() );
             searchResult.setId( artistEntity.getArtistID() );
-            searchResult.setArtworkPath( commonFile.getDomain() + commonFile.getSeparator() + commonFile.getArtistaArtworksaAlias() + commonFile.getSeparator() + artistEntity.getArtistArtworkPath() );
+            searchResult.setArtworkPath( commonFile.getResourcesDomain() + commonFile.getSeparator() + commonFile.getArtistaArtworksaAlias() + commonFile.getSeparator() + artistEntity.getArtistArtworkPath() );
 
             searchResults.add( searchResult );
         }
@@ -127,7 +127,7 @@ public class SearchLogic {
             SearchResult searchResult = new SearchResult();
             searchResult.setType( "album" );
             searchResult.setId( albumEntity.getAlbumID() );
-            searchResult.setArtworkPath( commonFile.getDomain() + commonFile.getSeparator() + commonFile.getAlbumArtworksAlias() + commonFile.getSeparator() + albumEntity.getAlbumArtworkPath() );
+            searchResult.setArtworkPath( commonFile.getResourcesDomain() + commonFile.getSeparator() + commonFile.getAlbumArtworksAlias() + commonFile.getSeparator() + albumEntity.getAlbumArtworkPath() );
             searchResult.setName( albumEntity.getName() );
 
             searchResults.add( searchResult );
